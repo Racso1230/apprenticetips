@@ -1,0 +1,59 @@
+<?php
+//database details
+$host = "ap-sp-proj.chwmwhavjzga.eu-west-2.rds.amazonaws.com";
+$port = 3306;
+$socket = "";
+$user = "admin";
+$password = "i5PSCv6LZjuHtyqqFXfS";
+$dbname = "webform";
+$connect = "";
+
+// Create connection
+$connect = mysqli_connect($host, $user, $password, $dbname);
+
+// Check connection
+if (mysqli_connect_errno()) {
+    die("Failed to connect to MySQL: " . mysqli_connect_error());
+}
+
+// Retrieve all columns from the Apprenticeships table
+$query = "SELECT * FROM Apprenticeships";
+
+// Execute the query
+$result = mysqli_query($connect, $query);
+
+if ($result) {
+    // Check if any records found
+    if (mysqli_num_rows($result) > 0) {
+        // Display table header with column names
+        echo '<table>';
+        echo '<tr>';
+        while ($field = mysqli_fetch_field($result)) {
+            echo '<th>' . $field->name . '</th>';
+        }
+        echo '</tr>';
+
+        // Fetch and display records
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<tr>';
+            foreach ($row as $value) {
+                echo '<td>' . $value . '</td>';
+            }
+            echo '</tr>';
+        }
+
+        // Close table
+        echo '</table>';
+    } else {
+        echo 'No records found.';
+    }
+} else {
+    echo 'Error performing query: ' . mysqli_error($connect);
+}
+
+// Free the result set
+mysqli_free_result($result);
+
+// Close the connection
+mysqli_close($connect);
+?>

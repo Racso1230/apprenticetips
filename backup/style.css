@@ -1,0 +1,114 @@
+body {
+    font-family: "Open Sans",sans-serif;
+    background-color: #f4f4fd;
+    color: #3a3a3a;
+    scroll-behavior: smooth;
+}
+
+
+.site-header{
+    position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+    
+    
+}
+
+.site-header .header-image {
+    vertical-align: middle;
+    width:750px;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1e73be;
+    overflow: hidden;
+    padding: 7px;
+    width: 100%;
+  }
+  .items{
+    padding-left: 23%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav button {
+    float: left;
+    background-color: #1e73be;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #f2f2f2;
+    border: none;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #222222    ;
+    color: #f2f2f2;
+  }
+ 
+   .topnav button:hover {
+    background-color: #222222    ;
+    color: #f2f2f2;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-align:right;
+    padding-right: 55%;
+    vertical-align: top;
+  }
+
+  h3{
+    text-align: right;
+    padding-right: 55%;
+  }
+
+  .input {
+    vertical-align: top;
+    width: 515px;
+  }
+
+  .personal-details {
+    padding-left: 13%;
+  }
+
+  .comments {
+  width:505px;
+  }
+
+  .submit {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    width: 120px;
+}
+.search {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  width: 515px;
+  left: 350px;
+  position: fixed;
+}
+  
+
